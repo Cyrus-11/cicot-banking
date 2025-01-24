@@ -1,13 +1,20 @@
 import MobileNav from "@/components/MobileNav";
 import Sidebar from "@/components/Sidebar";
+import { getLoggedInUser } from "@/lib/actions/user.actions";
+import { getLocationOrigin } from "next/dist/shared/lib/utils";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
-export default function RootLayout({
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const loggedIn = {firstName: 'Cecil', lastName: 'JSM' };
+
+  const loggedIn = await getLoggedInUser();
+
+  if (!loggedIn) redirect('/sign-in')
 
   
   return (
@@ -20,7 +27,7 @@ export default function RootLayout({
             src="/icons/logo.svg" 
             width={30}
             height={30}
-            alt="menu icon"
+            alt="logo"
             />
             <div>
 
