@@ -1,4 +1,4 @@
-# Fintech Bank Application
+# CICOT Fintech Bank Application
 
 ## Table of Contents
 - [Introduction](#introduction)
