@@ -43,7 +43,7 @@ Ensure you have the following installed:
 ### Installation
 Clone the repository and install dependencies:
 ```sh
-git clone https://github.com/adrianhajdin/banking.git
+git clone https://github.com/Cyrus-11/cicot-banking.git
 cd banking
 npm install
 ```
