@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fintech Bank Application
 
-## Getting Started
+## Table of Contents
+- [Introduction](#introduction)
+- [Tech Stack](#tech-stack)
+- [Features](#features)
+- [Quick Start](#quick-start)
+- [Environment Variables](#environment-variables)
+- [Running the Project](#running-the-project)
 
-First, run the development server:
+## Introduction
+Fintech Bank is a modern financial SaaS platform built with Next.js. It connects multiple bank accounts, displays transactions in real-time, facilitates fund transfers, and helps users manage their finances seamlessly.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech Stack
+- Next.js
+- TypeScript
+- Appwrite
+- Plaid
+- Dwolla
+- React Hook Form
+- Zod
+- TailwindCSS
+- Chart.js
+- ShadCN
+
+## Features
+- **Authentication**: Secure SSR authentication with validation and authorization.
+- **Bank Account Integration**: Link multiple bank accounts via Plaid.
+- **Dashboard Overview**: Displays total balance, recent transactions, and spending insights.
+- **Bank Management**: View connected bank accounts with balances and details.
+- **Transaction History**: Paginated and filterable transaction logs.
+- **Real-time Updates**: Changes are reflected instantly across the platform.
+- **Funds Transfer**: Secure money transfers via Dwolla.
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices.
+
+## Quick Start
+### Prerequisites
+Ensure you have the following installed:
+- Git
+- Node.js
+- npm
+
+### Installation
+Clone the repository and install dependencies:
+```sh
+git clone https://github.com/adrianhajdin/banking.git
+cd banking
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment Variables
+Create a `.env` file in the project root and add the following:
+```sh
+# NEXT.js Configuration
+NEXT_PUBLIC_SITE_URL=
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Appwrite Credentials
+NEXT_PUBLIC_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
+NEXT_PUBLIC_APPWRITE_PROJECT=
+APPWRITE_DATABASE_ID=
+APPWRITE_USER_COLLECTION_ID=
+APPWRITE_BANK_COLLECTION_ID=
+APPWRITE_TRANSACTION_COLLECTION_ID=
+APPWRITE_SECRET=
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Plaid API Keys
+PLAID_CLIENT_ID=
+PLAID_SECRET=
+PLAID_ENV=
+PLAID_PRODUCTS=
+PLAID_COUNTRY_CODES=
 
-## Learn More
+# Dwolla API Keys
+DWOLLA_KEY=
+DWOLLA_SECRET=
+DWOLLA_BASE_URL=https://api-sandbox.dwolla.com
+DWOLLA_ENV=sandbox
+```
+Replace the placeholder values with your actual credentials.
 
-To learn more about Next.js, take a look at the following resources:
+## Running the Project
+```sh
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
+This project is designed for financial technology applications, ensuring security, scalability, and seamless user experience.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
