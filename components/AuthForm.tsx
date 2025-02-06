@@ -37,7 +37,7 @@ const AuthForm = ({ type }: { type: string}) => {
         resolver: zodResolver(formSchema),
         defaultValues: {
             email: "",
-            password:"0"
+            password:""
         },
     })
 
@@ -91,7 +91,7 @@ const AuthForm = ({ type }: { type: string}) => {
               src="/icons/logo.svg"
               width={34}
               height={34}
-              alt="Horizon logo"
+              alt="Cicot logo"
             />
             <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">CICOT</h1>
           </Link>
