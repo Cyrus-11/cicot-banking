@@ -24,14 +24,15 @@ Fintech Bank is a modern financial SaaS platform built with Next.js. It connects
 - ShadCN
 
 ## Features
-- **Authentication**: Secure SSR authentication with validation and authorization.
-- **Bank Account Integration**: Link multiple bank accounts via Plaid.
-- **Dashboard Overview**: Displays total balance, recent transactions, and spending insights.
-- **Bank Management**: View connected bank accounts with balances and details.
-- **Transaction History**: Paginated and filterable transaction logs.
-- **Real-time Updates**: Changes are reflected instantly across the platform.
-- **Funds Transfer**: Secure money transfers via Dwolla.
-- **Responsive Design**: Optimized for desktop, tablet, and mobile devices.
+- **Authentication**: An ultra-secure SSR authentication with proper validations and authorization.
+- **Bank Account Integration**: Integrates with Plaid for multiple bank account linking.
+- **Dashboard Overview**: Shows general overview of user account with total balance from all connected banks, recent transactions, money spent on different categories, etc.
+- **Bank Management**: Check the complete list of all connected banks with respective balances, account details.
+- **Transaction History**: Includes pagination and filtering options for viewing transaction history of different banks.
+- **Real-time Updates**: Reflects changes across all relevant pages upon connecting new bank accounts.
+- **Funds Transfer**: Allows users to transfer funds using Dwolla to other accounts with required fields and recipient bank ID.
+- **Responsive Design**: Ensures the application adapts seamlessly to various screen sizes and devices, providing a consistent user experience across desktop, tablet, and mobile platforms.
+and many more, including code architecture and reusability.
 
 ## Quick Start
 ### Prerequisites
