@@ -32,14 +32,29 @@ const AuthForm = ({ type }: { type: string}) => {
     const [isLoading, setIsLoading] = useState(false);
     const formSchema = authFormSchema(type);
 
-    //1. Define a submit handler
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
-        defaultValues: {
-            email: "",
-            password:""
-        },
-    })
+    const defaultValues =
+  type === 'sign-up'
+    ? {
+        firstName: '',
+        lastName: '',
+        address1: '',
+        city: '',
+        state: '',
+        postalCode: '',
+        dateOfBirth: '',
+        ssn: '',
+        email: '',
+        password: '',
+      }
+    : {
+        email: '',
+        password: '',
+      };
+
+const form = useForm<z.infer<typeof formSchema>>({
+  resolver: zodResolver(formSchema),
+  defaultValues,
+});
 
 
     //2. Define a submit handler 
