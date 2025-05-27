@@ -83,6 +83,11 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
       bankId: bank.$id,
     });
 
+    if (!transferTransactionsData || !Array.isArray(transferTransactionsData.documents)) {
+      console.warn("No transferTransactionsData found for bank ID:", bank.$id);
+      return null; // or throw new Error("Transfer transactions not found")
+    }
+
     const transferTransactions = transferTransactionsData.documents.map(
       (transferData: Transaction) => ({
         id: transferData.$id,
