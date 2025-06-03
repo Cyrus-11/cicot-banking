@@ -153,7 +153,7 @@ const form = useForm<z.infer<typeof formSchema>>({
                     />
 
                     <div className='flex gap-4'>
-                    <CustomInput control={form.control} name='state' label='State' placeholder='ex: Ogun'
+                    <CustomInput control={form.control} name='state' label='State' placeholder='ex: OG'
                     />
                     <CustomInput control={form.control} name='postalCode' label='Postal Code' placeholder='Example: 11101'
                     />
